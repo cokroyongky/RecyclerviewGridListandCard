@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/activity_vertical_margin">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_item_photo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_toRightOf="@id/img_item_photo"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_item_name"
+            style="@style/tvName" />
+
+        <TextView
+            android:id="@+id/tv_item_remarks"
+            style="@style/tvRemarks"
+            android:layout_below="@id/tv_item_name" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/lineview"
+        style="@style/lineBlack"
+        android:layout_below="@id/img_item_photo" />
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tbContent"
+        android:layout_below="@id/lineview">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/tvdesc"
+                style="@style/tvGeneral.long"
+                android:layout_column="1"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin" />
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/tbContent"
+        android:layout_height="wrap_content">
+        <TableRow>
+
+            <TextView
+                style="@style/tvGeneral.field"
+                android:layout_column="1"
+                android:text="@string/born" />
+
+            <TextView
+                android:id="@+id/tvborn"
+                android:layout_column="2"
+                style="@style/tvGeneral.short" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/tvGeneral.field"
+                android:layout_column="1"
+                android:text="@string/die" />
+
+            <TextView
+                android:id="@+id/tvdie"
+                android:layout_column="2"
+                style="@style/tvGeneral.short" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                style="@style/tvGeneral.field"
+                android:layout_column="1"
+                android:text="@string/vice" />
+
+            <TextView
+                android:id="@+id/tvvice"
+                style="@style/tvGeneral.short"
+                android:layout_column="2" />
+        </TableRow>
+    </TableLayout>
+
+
+</RelativeLayout>
